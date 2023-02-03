@@ -7,7 +7,7 @@ import {
 } from "../store/github/github.api"
 
 const HomePage = () => {
-  const [search, setSearch] = useState("vladilenm")
+  const [search, setSearch] = useState("")
   const [dropdown, setDropdown] = useState(false)
   const debounced = useDebounce(search)
   const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
